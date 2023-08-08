@@ -1,0 +1,61 @@
+.notification-bar-success, .notification-bar-error, .notification-bar-warning {
+    position: fixed;
+    z-index: 101;
+    transform: translateY(calc(100% + 10px));
+    font-family: Arial, sans-serif;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 1.5;
+    overflow: hidden;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.notification-image {
+    width: 7.5%;
+    height: 7.5%;
+    margin-top: 10px;
+}
+
+.notification-bar-message {
+    font-size: 1.20vw;
+}
+
+.notification-bar-title {
+    font-size: 1.50vw;
+    font-weight: bold;
+}
+
+.notification-bar-success {
+    background: #5CB85C;
+    color: #FFFFFF;
+}
+
+.notification-bar-error {
+    background: #FF0000;
+    color: #FFFFFF;
+}
+
+.notification-bar-warning {
+    background: #E48900;
+    color: #FFFFFF;
+}
+
+.notification-bar-success, .notification-bar-error, .notification-bar-warning {
+    animation: slide-up 1.0s ease forwards;
+}
+
+.notification-bar-success.hide, .notification-bar-error.hide, .notification-bar-warning.hide {
+    animation: slide-down 4.0s ease forwards;
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(100% + 10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slide-down {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100% + 10px); }
+}
